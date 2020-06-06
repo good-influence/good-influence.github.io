@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on YesoLog</title>
+    <link>https://good-influence.github.io/posts/</link>
+    <description>Recent content in Posts on YesoLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jun 2020 22:50:16 +0900</lastBuildDate>
+    
+	<atom:link href="https://good-influence.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>리눅스 커맨드라인 -파일시스템</title>
+      <link>https://good-influence.github.io/posts/linux-command-filesystem/</link>
+      <pubDate>Fri, 05 Jun 2020 22:50:16 +0900</pubDate>
+      
+      <guid>https://good-influence.github.io/posts/linux-command-filesystem/</guid>
+      <description>파일 시스템 파일시스템 구조 유닉스형 운영체제(리눅스), 윈도우즈에서는 계층적인 디렉토리 구조로 파일을 구성 = 트리형식 최상위에 있는 디렉토리를 루트 디렉토리 라고 한다.</description>
+    </item>
+    
+  </channel>
+</rss>
