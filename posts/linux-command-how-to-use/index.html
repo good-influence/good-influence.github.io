@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.69.2" />
+
+  <title>Linux Command Line - How to use &middot; YesoLog</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://good-influence.github.io/images/profile.png">
+
+  
+  <meta property="og:type" content="blog"/>
+  <meta property="og:site_name" content="YesoLog"/><meta property="og:title" content="Linux Command Line - How to use"/>
+  <meta property="og:url" content="https://good-influence.github.io/posts/linux-command-how-to-use/"/>
+  <meta property="og:description" content="What is Command ?   명령어란 /usr/bin 디렉토리에서 본 파일들처럼 __실행프로그램__을 말한다."/>
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "YesoLog",
+    "url" : "https://good-influence.github.io/",
+    "image": "https://good-influence.github.io/images/profile.png",
+    "description": ""
+  }
+  </script>
+
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://good-influence.github.io/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://good-influence.github.io/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://good-influence.github.io/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://good-influence.github.io/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>YesoLog</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://good-influence.github.io/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="#" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/good-influence" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Linux Command Line - How to use</h1>
+
+  <div class="post-date">
+    <time datetime="2020-06-05T22:50:16&#43;0900">Jun 5, 2020</time> · 3 min read
+  </div>
+
+  <h1 id="what-is-command-">What is Command ?</h1>
+<ul>
+<li>
+<p>명령어란 /usr/bin 디렉토리에서 본 파일들처럼 __실행프로그램__을 말한다.</p>
+</li>
+<li>
+<p>명령어란 쉘에 내장되어 있는 명령어다. bash는 쉘-빌트인(shell builtins)이라고 하는 다수의 명령어를 내부적으로 지원한다. cd 명령어가 바로 그런 예다.</p>
+</li>
+<li>
+<p>명령어란 쉘 함수다.</p>
+</li>
+<li>
+<p>명령어란 별칭이다. 다른 명령어로부터 명령어를 새롭게 정의할 수 있다.</p>
+</li>
+</ul>
+<h2 id="명령어-확인">명령어 확인</h2>
+<h3 id="type"><code>type</code></h3>
+<p>쉘에 내장된 형식으로 명령어 이름을 입력하면 쉘이 실행하게 될 명령어가 어떤 타입인지를 보여준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ type type
+type is a shell builtin
+<span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ type ls
+ls is aliased to <span style="color:#e6db74">`</span>ls --color<span style="color:#f92672">=</span>tty<span style="color:#e6db74">`</span>
+<span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ type cp
+cp is /bin/cp
+</code></pre></div><h3 id="which"><code>which</code></h3>
+<p>실행 파일의 위치를 표시해준다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ which ls
+/bin/ls
+</code></pre></div><p>which 명령어는 오직 실행 프로그램만을 대상으로 한다. 실행 프로그램을 대신하는 빌트인이나 별칭에는 동작하지 않는다. 쉘 빌트인(ex. cd)에 사용하면 오류메시지를 보게 된다.</p>
+<h2 id="명령어-도움말-보기">명령어 도움말 보기</h2>
+<h3 id="help"><code>help</code></h3>
+<p>bash에는 각 쉘 빌트인마다 내장된 도움말 기능이 있다. 이 도움말을 확인하려면 다음과 같이 help를 쉘 내장 명령어 이름 앞에 입력하면 된다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ help cd
+cd: cd <span style="color:#f92672">[</span>-L|-P<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>dir<span style="color:#f92672">]</span>
+Change the current directory to DIR. The variable $HOME is the default DIR. The variable CDPATH defines the search path <span style="color:#66d9ef">for</span> the directory containing DIR.
+</code></pre></div><p><code>[-L|-P]</code> 대괄호 안의 내용은 옵션이라는 것을 뜻하고 | 기호는 둘 중에 하나의 항목만을 사용한다는 것을 뜻한다.</p>
+<h3 id="--help">&ndash;help</h3>
+<p>명령어 문법과 옵션에 대한 설명을 보여준다.</p>
+<h3 id="man"><code>man</code></h3>
+<p>command line 용 실행 프로그램 대부분은 매뉴얼 또는 man 페이지락 불리는 공식적인 프로그램 설명서를 제공하고 있다.
+<code>man program</code> 형태로 사용한다. 일반적으로 제목, 명령어 문법 개요, 명령어 사용 목적, 그리고 명령어 옵션에 대한 설명 정도가 들어있다.</p>
+<ul>
+<li>
+<p>man 페이지 구조</p>
+<table>
+<thead>
+<tr>
+<th align="left">섹션</th>
+<th align="left">내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left">사용자 명령어</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">커널 시스템 콜 API</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">C 라이브러리 API</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">장치 노드 및 드라이버와 같은 특수 파일</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">파일 포맷</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">스크린 세이버와 같은 게임이나 미디어 파일</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">그 외 여러 종류</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">시스템 관리용 명령어</td>
+</tr>
+</tbody>
+</table>
+<p>예제:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ man <span style="color:#ae81ff">5</span> passwd
+</code></pre></div><p><code>/etc/passwd</code> 파일의 포맷이 무엇인지 설명하고 있는 man 페이지를 보여준다.</p>
+</li>
+</ul>
+<h3 id="apropos"><code>apropos</code></h3>
+<p><code>apropos 검색어</code> 명령어로 man 페이지 목록을 검색할 수 있다.
+man 명령어를 -k 옵셕과 함께 사용하는 것과 동일한 기능이다.</p>
+<h3 id="whatis"><code>whatis</code></h3>
+<p>특정 키워드에 부합하는 man 페이지에 대하여 그 이름과 한 줄의 간략한 정보를 보여준다.</p>
+<h3 id="info"><code>info</code></h3>
+<p>man 페이지의 대안으로 GNU 프로젝트가 제공한다.
+info 라는 읽기 프로그램으로 볼 수 있다. 웹 페이지처럼 하이퍼링크로 되어 있다.</p>
+<ul>
+<li>info 명령어
+<table>
+<thead>
+<tr>
+<th align="left">명령어</th>
+<th align="left">실행</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">?</td>
+<td align="left">명령어 도움말 보기</td>
+</tr>
+<tr>
+<td align="left">PAGE UP 또는 BACKSPACE</td>
+<td align="left">이전 페이지 보기</td>
+</tr>
+<tr>
+<td align="left">PAGE DOWN 또는 SPACEBAR</td>
+<td align="left">다음 페이지 보기</td>
+</tr>
+<tr>
+<td align="left">n</td>
+<td align="left">다음 - 다음 노드 보기</td>
+</tr>
+<tr>
+<td align="left">p</td>
+<td align="left">이전 - 이전 노드 보기</td>
+</tr>
+<tr>
+<td align="left">u</td>
+<td align="left">위로 - 현재 표시된 노드의 상위노드 (주로 메뉴) 보기</td>
+</tr>
+<tr>
+<td align="left">ENTER</td>
+<td align="left">현재 커서 위치에 있는 하이퍼링크로 이동하기</td>
+</tr>
+<tr>
+<td align="left">q</td>
+<td align="left">종료하기</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>지금까지 나온 command line 프로그램 대부분은 GNU 프로그램의 coreutils 패키지으 일부분이다 다음 명령어로 더 많은 정보를 얻을 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ info coreutils
+</code></pre></div><h3 id="readme-및-기타-프로그램-문서-파일들">README 및 기타 프로그램 문서 파일들</h3>
+<p>사용자 컴퓨터에 설치된 대부분의 소프트웨어 패키지들은 문서 파일을 가지고 있는데 <code>/usr/share/doc</code> 디렉토리 내에 존재한다. 대부분은 텍스트 파일 형식으로 저장되고 less명령어로 볼 수 있고 일부 파일들은 HTML 포맷으로 되어 있어 웹 브라우저를 통해서도 확인 가능하다.<br>
+.gz 확장자를 사용하는 파일들은 gzip 압축 프로그램으로 압축된 파일로 zless 라고 불리는 프로그램으로 볼 수 있다.</p>
+<h3 id="기타-tip">기타 Tip</h3>
+<ol>
+<li>
+<p>세미콜론으로 각 명령어를 구분하여 한 줄에 하나 이상의 명령어를 입력하는 것이 가능하다. <code>cd /usr; ls; cd-</code></p>
+</li>
+<li>
+<p>alias를 사용해서 명령배열 또는 명령을 새로운 명령어로 만들 수 있다. 이 명령어 구조는 `ailas name= &lsquo;string&rsquo; 이다.</p>
+<ol>
+<li>
+<p>type 명령어를 사용하여 만들 이름이 기존에 사용되고 있는지 확인한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ type test
+bash: type: test: not found
+</code></pre></div><p>위와 같이 나오면 사용 가능한 이름이다.</p>
+</li>
+<li>
+<p>별칭 만들기</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ alias test<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;cd /usr; ls; cd-&#39;</span>
+</code></pre></div></li>
+</ol>
+</li>
+</ol>
+<p>마찬가지로 별칭을 확인하기 위해 type을 사용할 수 있다. 별칭을 삭제하려면 <code>unalias</code> 명령어를 사용한다. 사용자 환경에 정의된 모든 별칭을 확인하려면 별도의 인자 없이 <code>alias</code> 명령어를 사용하면 된다.<br>
+<strong>커맨드 라인에서 별칭을 만들면 쉘 세션이 종료될 때 별칭도 사라진다..</strong> 로그인시 환경을 설정하는 파일에 별칭 추가하는 방법 다음에 추가할게용~~</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy; Author Name 2020 · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

@@ -12,12 +12,39 @@
     
     
     <item>
-      <title>리눅스 커맨드라인 -파일시스템</title>
+      <title>Linux Command Line - File system</title>
       <link>https://good-influence.github.io/posts/linux-command-filesystem/</link>
       <pubDate>Fri, 05 Jun 2020 22:50:16 +0900</pubDate>
       
       <guid>https://good-influence.github.io/posts/linux-command-filesystem/</guid>
       <description>파일 시스템 파일시스템 구조 유닉스형 운영체제(리눅스), 윈도우즈에서는 계층적인 디렉토리 구조로 파일을 구성 = 트리형식 최상위에 있는 디렉토리를 루트 디렉토리 라고 한다.</description>
+    </item>
+    
+    <item>
+      <title>Linux Command Line - File system-2</title>
+      <link>https://good-influence.github.io/posts/linux-command-filesystem-2/</link>
+      <pubDate>Fri, 05 Jun 2020 22:50:16 +0900</pubDate>
+      
+      <guid>https://good-influence.github.io/posts/linux-command-filesystem-2/</guid>
+      <description>시스템 살펴보기 ls 현재 작업 디렉토리에 있는 파일과 하위 디렉토리들이 모두 표시됨</description>
+    </item>
+    
+    <item>
+      <title>Linux Command Line - How to use</title>
+      <link>https://good-influence.github.io/posts/linux-command-how-to-use/</link>
+      <pubDate>Fri, 05 Jun 2020 22:50:16 +0900</pubDate>
+      
+      <guid>https://good-influence.github.io/posts/linux-command-how-to-use/</guid>
+      <description>What is Command ?   명령어란 /usr/bin 디렉토리에서 본 파일들처럼 __실행프로그램__을 말한다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://good-influence.github.io/posts/linux-command-filesystem-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://good-influence.github.io/posts/linux-command-filesystem-3/</guid>
+      <description>파일과 디렉토리 조작 GUI 환경의 파일관리자로도 손쉽게 조작이 가능한데 커맨드라인 프로그램을 사용하는 이유는 강력함과 유연성 때문이다.</description>
     </item>
     
   </channel>
