@@ -44,7 +44,16 @@
       <pubDate>Fri, 05 Jun 2020 22:50:16 +0900</pubDate>
       
       <guid>https://good-influence.github.io/posts/linux-command-how-to-use/</guid>
-      <description>What is Command ?   명령어란 /usr/bin 디렉토리에서 본 파일들처럼 __실행프로그램__을 말한다.</description>
+      <description>What is Command   명령어란 /usr/bin 디렉토리에서 본 파일들처럼 실행프로그램을 말한다.</description>
+    </item>
+    
+    <item>
+      <title>Linux Command Line - Redirection</title>
+      <link>https://good-influence.github.io/posts/linux-command-redirection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://good-influence.github.io/posts/linux-command-redirection/</guid>
+      <description>Redirection 표준 입출력 (stdout/stdin)과 표준 오류 (stderr) 프로그램 입출력 원리</description>
     </item>
     
   </channel>
