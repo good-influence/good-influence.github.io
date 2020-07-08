@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.69.2" />
+
+  <title> &middot; YesoLog</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en-us"/>
+
+  
+  <meta property="og:image" content="https://good-influence.github.io/images/profile.png">
+
+  
+  <meta property="og:type" content="blog"/>
+  <meta property="og:site_name" content="YesoLog"/><meta property="og:title" content=""/>
+  <meta property="og:url" content="https://good-influence.github.io/posts/linux-command-expansion/"/>
+  <meta property="og:description" content="확장 예를 들어 ls *.txt의 * 기호처럼 쉘에 여러 의미를 주는 경우 bash는 명령어를 수행하기 전에 텍스트에 몇 가지 프로세스를 진행한다."/>
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "YesoLog",
+    "url" : "https://good-influence.github.io/",
+    "image": "https://good-influence.github.io/images/profile.png",
+    "description": ""
+  }
+  </script>
+
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://good-influence.github.io/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://good-influence.github.io/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://good-influence.github.io/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://good-influence.github.io/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>YesoLog</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://good-influence.github.io/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li><li>
+          <a href="/about/"> About </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="#" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/good-influence" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1></h1>
+
+  <div class="post-date">
+    <time datetime="0001-01-01T00:00:00Z">Jan 1, 0001</time> · 2 min read
+  </div>
+
+  <h1 id="확장">확장</h1>
+<p>예를 들어 <code>ls *.txt</code>의 * 기호처럼 쉘에 여러 의미를 주는 경우 bash는 명령어를 수행하기 전에 텍스트에 몇 가지 프로세스를 진행한다. 이러한 프로세스를 <strong>확장</strong> 이라고 한다.</p>
+<h2 id="echo"><code>echo</code></h2>
+<ul>
+<li>텍스트 라인 표시하는 명령어</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo this is a test
+this is a test
+
+
+<span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ ehco *
+Desktop Documents ls-output.txt Music Pictures Public Templates Videos
+</code></pre></div><p>1번 예로 보면 2번 또한 <code>*</code>이 출력되었을 것 같은데 그렇지 않고 와일드 카드로써 * 기호가 사용되었다. 쉘은 어떻게 그것을 이해하고 수행할까?<br>
+쉘은 <code>echo</code>명령어가 실행되기 전에 <code>*</code>기호를 다른 무언가로 (위 예는 현재 작업 디렉토리에 있는 모든 디렉토리의 이름으로 확장) 확장시킨다.<br>
+엔터키를 눌렀을 때 쉘은 자동적으로 명령어가 실행되기 직전에 모든 한정 문자들을 확장시킨다. 따라서 <code>echo</code>명령어는 <code>*</code> 기호 그 자체를 출력하지 않고 그 확장된 결과만을 보여준 것이다.</p>
+<h3 id="경로명-확장">경로명 확장</h3>
+<p>와일드카드로 동작하는 방식을 경로명 확장 이라고 한다.</p>
+<ul>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo D*
+Desktop Documents
+</code></pre></div></li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo *s
+Documents Pictures Templates Videos
+</code></pre></div></li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo <span style="color:#f92672">[[</span>:upper:<span style="color:#f92672">]]</span>*
+Desktop Documents Music Pictures Public Templates Videos
+</code></pre></div></li>
+<li>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo /usr/*/share
+/usr/kerberos/share /usr/local/share
+</code></pre></div></li>
+</ul>
+<h3 id="틸드-확장">틸드(~) 확장</h3>
+<p>~(물결표) 기호 문자가 맨 앞에 있다면 지정된 사용자의 홈 디렉토리명을 나타낸다. 이름을 지정하지 않으면 현재 사용자의 홈 디렉토리명을 나타낸다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo ~
+/home/me
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo ~yesol
+/home/yesol
+</code></pre></div><h3 id="산술-확장">산술 확장</h3>
+<p>쉘에서는 산술식 확장이 가능하여 쉘 프롬포트를 계산기처럼 사용할 수 있다.</p>
+<p><code>$((expression))</code> 형식으로 사용한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo <span style="color:#66d9ef">$((</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">))</span>
+<span style="color:#ae81ff">4</span>
+</code></pre></div><p>더하기(+), 빼기(-), 곱하기(*), 나누기(/), 모듈로 Modulo (%), 거듭제곱(**) 을 사용할 수 있고 산술 확장에서는 정수만 사용하기 때문에 나누기의 결과값은 항상 정수다.<br>
+산술식에서 공백은 중요하지 않으며 또한 산술식은 중첩될 수 있다.</p>
+<h3 id="중괄호-확장">중괄호 확장</h3>
+<p>중괄호 안에 표현된 패턴과 일치하는 다양한 텍스트 문자열을 만들 수 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo Front-<span style="color:#f92672">{</span>A,B,C<span style="color:#f92672">}</span>-Back
+Front-A-Back Front-B-Back Front-C-Back
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo Number_<span style="color:#f92672">{</span>1..5<span style="color:#f92672">}</span>
+Number_1 Number_2 Number_3 Number_4 Number_5
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo <span style="color:#f92672">{</span>Z..A<span style="color:#f92672">}</span>
+Z Y X W V U T S R Q P O N M L K J I H G F E D C B A
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo a<span style="color:#f92672">{</span>A<span style="color:#f92672">{</span>1,2<span style="color:#f92672">}</span>,B<span style="color:#f92672">{</span>3,4<span style="color:#f92672">}}</span>b
+aA1b aA2b aB3b aB4b
+</code></pre></div><p>연도-월 형식의 디렉토리를 만들고 싶은 경우<br>
+<code>mkdir {2020..2022}-0{1..9} {2020..2022}-{10..12}</code></p>
+<h3 id="매개변수-확장">매개변수 확장</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ echo $USER
+me
+</code></pre></div><p><code>USER</code>라는 변수는 사용자명을 가지고 있는데 매개변수 확장으로 USER 내용을 볼 수 있다.</p>
+<ul>
+<li>
+<p><code>printenv | less</code> : 사용 가능한 변수 목록 보기</p>
+</li>
+<li>
+<p>매개변수 확장으로 변수명을 잘못 입력하면 이 확장은 여전히 수행되지만 빈 문자열을 반환한다.</p>
+</li>
+</ul>
+<h3 id="명령어-치환">명령어 치환</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ ls -l <span style="color:#66d9ef">$(</span>which cp<span style="color:#66d9ef">)</span>
+-rwxr-xr-x <span style="color:#ae81ff">1</span> root root <span style="color:#ae81ff">71516</span> 2020-07-08 22:01 /bin/cp
+</code></pre></div><p><code>ls</code> 명령어 인자로 <code>which cp</code> 결과를 사용했음을 알 수 있다.</p>
+<p>단순히 명령어에 제한되지 않고 파이프라인 전체에서 사용될 수도 있다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>me@linux ~<span style="color:#f92672">]</span>$ file <span style="color:#66d9ef">$(</span>ls /usr/bin/* | grep zip<span style="color:#66d9ef">)</span>
+/usr/bin/bunzip2:   symbolic link to <span style="color:#e6db74">&#39;bzip2&#39;</span>
+/usr/bin/bzip2:     ELF 32-BIT LSB executable, Intel <span style="color:#ae81ff">80386</span> 
+...
+</code></pre></div>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy; Author Name 2020 · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>
