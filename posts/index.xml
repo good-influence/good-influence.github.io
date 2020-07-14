@@ -6,10 +6,19 @@
     <description>Recent content in Posts on YesoLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2020 22:50:16 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2020 22:03:50 +0900</lastBuildDate>
     
 	<atom:link href="https://good-influence.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux Command Expansion</title>
+      <link>https://good-influence.github.io/posts/linux-command-expansion2/</link>
+      <pubDate>Tue, 14 Jul 2020 22:03:50 +0900</pubDate>
+      
+      <guid>https://good-influence.github.io/posts/linux-command-expansion2/</guid>
+      <description>extension 예를 들어 ls *.txt의 * 기호처럼 쉘에 여러 의미를 주는 경우 bash는 명령어를 수행하기 전에 텍스트에 몇 가지 프로세스를 진행한다.</description>
+    </item>
     
     <item>
       <title>Linux Command Line - File system</title>

@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://good-influence.github.io/posts/linux-command-expansion2/</loc>
+    <lastmod>2020-07-14T22:03:50+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://good-influence.github.io/posts/</loc>
+    <lastmod>2020-07-14T22:03:50+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://good-influence.github.io/posts/linux-command-filesystem/</loc>
     <lastmod>2020-06-05T22:50:16+09:00</lastmod>
   </url>
@@ -19,11 +29,6 @@
   
   <url>
     <loc>https://good-influence.github.io/posts/linux-command-how-to-use/</loc>
-    <lastmod>2020-06-05T22:50:16+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://good-influence.github.io/posts/</loc>
     <lastmod>2020-06-05T22:50:16+09:00</lastmod>
   </url>
   
