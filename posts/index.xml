@@ -48,15 +48,6 @@
     </item>
     
     <item>
-      <title></title>
-      <link>https://good-influence.github.io/posts/linux-command-expansion/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://good-influence.github.io/posts/linux-command-expansion/</guid>
-      <description>확장 예를 들어 ls *.txt의 * 기호처럼 쉘에 여러 의미를 주는 경우 bash는 명령어를 수행하기 전에 텍스트에 몇 가지 프로세스를 진행한다.</description>
-    </item>
-    
-    <item>
       <title>Linux Command Line - Redirection</title>
       <link>https://good-influence.github.io/posts/linux-command-redirection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
