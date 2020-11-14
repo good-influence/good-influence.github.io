@@ -3,37 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://good-influence.github.io/posts/linux-command-expansion2/</loc>
+    <loc>https://good-influence.github.io/linux/linux-command-expansion2/</loc>
     <lastmod>2020-07-14T22:03:50+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://good-influence.github.io/posts/</loc>
+    <loc>https://good-influence.github.io/linux/</loc>
     <lastmod>2020-07-14T22:03:50+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://good-influence.github.io/posts/linux-command-filesystem/</loc>
+    <loc>https://good-influence.github.io/linux/linux-command-filesystem/</loc>
     <lastmod>2020-06-05T22:50:16+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://good-influence.github.io/posts/linux-command-filesystem-2/</loc>
+    <loc>https://good-influence.github.io/linux/linux-command-filesystem-2/</loc>
     <lastmod>2020-06-05T22:50:16+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://good-influence.github.io/posts/linux-command-filesystem-3/</loc>
+    <loc>https://good-influence.github.io/linux/linux-command-filesystem-3/</loc>
     <lastmod>2020-06-05T22:50:16+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://good-influence.github.io/posts/linux-command-how-to-use/</loc>
+    <loc>https://good-influence.github.io/linux/linux-command-how-to-use/</loc>
     <lastmod>2020-06-05T22:50:16+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://good-influence.github.io/about/</loc>
+    <lastmod>2020-05-03T16:27:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://good-influence.github.io/java/about/</loc>
+    <lastmod>2020-05-03T16:27:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://good-influence.github.io/java/</loc>
     <lastmod>2020-05-03T16:27:27+09:00</lastmod>
   </url>
   
@@ -47,7 +57,7 @@
   </url>
   
   <url>
-    <loc>https://good-influence.github.io/posts/linux-command-redirection/</loc>
+    <loc>https://good-influence.github.io/linux/linux-command-redirection/</loc>
   </url>
   
   <url>
