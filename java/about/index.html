@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Hugo 0.69.2" />
 
-  <title>About &middot; YesoLog</title>
+  <title>JVM &middot; YesoLog</title>
 
   <meta name="description" content="" />
 
@@ -17,9 +17,9 @@
 
   
   <meta property="og:type" content="blog"/>
-  <meta property="og:site_name" content="YesoLog"/><meta property="og:title" content="About"/>
+  <meta property="og:site_name" content="YesoLog"/><meta property="og:title" content="JVM"/>
   <meta property="og:url" content="https://good-influence.github.io/java/about/"/>
-  <meta property="og:description" content=""/>
+  <meta property="og:description" content="JVM Java Virtual Machine, 자바를 실행하기 위한 가상 기계 |Java application| (일반) application| |:&mdash;:| :&mdash;:| | JVM| | OS | OS | 컴퓨터 (하드웨어) | 컴퓨터 (하드웨어)"/>
 
   <script type="application/ld+json">
   {
@@ -122,13 +122,93 @@
 
   <main class="content container">
   <div class="post">
-  <h1>About</h1>
+  <h1>JVM</h1>
 
   <div class="post-date">
-    <time datetime="2020-05-03T16:27:27&#43;0900">May 3, 2020</time> · 0 min read
+    <time datetime="2020-05-03T16:27:27&#43;0900">May 3, 2020</time> · 2 min read
   </div>
 
-  
+  <h1 id="jvm">JVM</h1>
+<p>Java Virtual Machine, 자바를 실행하기 위한 가상 기계
+|Java application| (일반) application|
+|:&mdash;:|                     :&mdash;:|
+| JVM|
+| OS |              OS
+| 컴퓨터 (하드웨어) | 컴퓨터 (하드웨어)</p>
+<ul>
+<li>
+<p>자바로 작성된 어플리케이션은 모두 이 가상 컴퓨터 (JVM) 위에서 실행되기 때문에 자바 어플리케이션이 실행되기 위해서는 반드시 JVM 이 필요하다.</p>
+<ul>
+<li>자바 바이트코드 (.class) 파일을 OS에 특화된 코드로 변환하여 실행</li>
+</ul>
+</li>
+</ul>
+<h2 id="자바-프로그램-작성-및-실행-과정">자바 프로그램 작성 및 실행 과정</h2>
+<p>우리가 자바 코드를 작성 후 실행하려면 다음과 같은 순서로 실행을 해야 한다.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    Hello.java 작성 ---------&gt; Hello.class 생성 ---------&gt; 실 행
+                    javac.exe                   java.exe
+</code></pre></div><ol>
+<li>Hello.java 작성</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hello</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello, Java.&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><ol start="2">
+<li>컴파일</li>
+</ol>
+<p><em>컴파일: 사람이 이해하는 언어(원시코드)를 컴퓨터가 이해할 수 있는 언어(목적코드)로 바꾸어주는 과정, 자바 컴파일러는 jvm을 위한 바이트코드를 생성함</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>me@java ~<span style="color:#f92672">]</span>$ javac Hello.java
+</code></pre></div><ul>
+<li>
+<p>javac 즉, 자바 컴파일러로 컴파일을 하면 <code>Hello.class</code> 클래스 파일이 생성된다.</p>
+<ul>
+<li>
+<p>생성 과정
+<img src="/images/compile.png" alt="컴파일"></p>
+<ol>
+<li>IDE 사용시 ctrl + s, 즉 저장시 ssd 메모리에 java 파일이 저장된다.</li>
+<li>컴파일러를 RAM 에 올린다. (SSD 보다 빠르기 때문에)</li>
+<li>컴파일러가 java파일을 읽어 레지스터에 전달한다.</li>
+<li>레지스터가 java파일을 한줄 씩 cpu에게 전달하면서 해석 과정을 거쳐 클래스 파일이 생성된다. 생성된 클래스 파일을 컴파일러에게 다시 전달한다.</li>
+<li>전달 받은 클래스파일을 다시 ssd 메모리에 저장한다.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>생성된 클래스 파일을 다음 명령어로 살펴 볼 수 있다. <code>javap -c Hello.java</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Compiled from <span style="color:#e6db74">&#34;Hello.java&#34;</span>
+class Hello <span style="color:#f92672">{</span>
+Hello<span style="color:#f92672">()</span>;
+    Code:
+    0: aload_0
+    1: invokespecial <span style="color:#75715e">#1                  // Method java/lang/Object.&#34;&lt;init&gt;&#34;:()V</span>
+    4: <span style="color:#66d9ef">return</span>
+
+public static void main<span style="color:#f92672">(</span>java.lang.String<span style="color:#f92672">[])</span>;
+    Code:
+    0: getstatic     <span style="color:#75715e">#7                  // Field java/lang/System.out:Ljava/io/PrintStream;</span>
+    3: ldc           <span style="color:#75715e">#13                 // String Hello, Java.</span>
+    5: invokevirtual <span style="color:#75715e">#15                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V</span>
+    8: <span style="color:#66d9ef">return</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>위 처럼 자바 클래스 파일 안에 들어 있는 것이 <code>바이트코드</code> 이다.</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>실행</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>me@java ~<span style="color:#f92672">]</span>$ java Hello
+Hello, Java.
+</code></pre></div><ul>
+<li>마지막으로 자바 인터프리터 (java.exe) 로 실행하면 위에서 작성한 예제를 실행한 결과를 볼 수 있다.</li>
+</ul>
+<h3 id="바이트코드">바이트코드</h3>
+
 </div>
 
 

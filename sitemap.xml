@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://good-influence.github.io/java/</loc>
+    <lastmod>2020-11-15T16:27:27+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://good-influence.github.io/java/jvm/</loc>
+    <lastmod>2020-11-15T16:27:27+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://good-influence.github.io/linux/linux-command-expansion2/</loc>
     <lastmod>2020-07-14T22:03:50+09:00</lastmod>
   </url>
@@ -34,16 +44,6 @@
   
   <url>
     <loc>https://good-influence.github.io/about/</loc>
-    <lastmod>2020-05-03T16:27:27+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://good-influence.github.io/java/about/</loc>
-    <lastmod>2020-05-03T16:27:27+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://good-influence.github.io/java/</loc>
     <lastmod>2020-05-03T16:27:27+09:00</lastmod>
   </url>
   

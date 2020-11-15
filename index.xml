@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>JVM</title>
+      <link>https://good-influence.github.io/java/jvm/</link>
+      <pubDate>Sun, 15 Nov 2020 16:27:27 +0900</pubDate>
+      
+      <guid>https://good-influence.github.io/java/jvm/</guid>
+      <description>JVM? JRE? JDK? JAVA? 출처: https://www.inflearn.com/course/the-java-code-manipulation
+JDK  Java Development Kit로 jre와 개발에 필요한 tool들을 묶은 것  JRE   Java Runtime Enviroment 로 JVM + 라이브러리 형태</description>
+    </item>
+    
+    <item>
       <title>Linux Command Expansion</title>
       <link>https://good-influence.github.io/linux/linux-command-expansion2/</link>
       <pubDate>Tue, 14 Jul 2020 22:03:50 +0900</pubDate>
@@ -62,15 +72,6 @@
       <pubDate>Sun, 03 May 2020 16:27:27 +0900</pubDate>
       
       <guid>https://good-influence.github.io/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://good-influence.github.io/java/about/</link>
-      <pubDate>Sun, 03 May 2020 16:27:27 +0900</pubDate>
-      
-      <guid>https://good-influence.github.io/java/about/</guid>
       <description></description>
     </item>
     
